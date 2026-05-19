@@ -1,55 +1,64 @@
-# Wasel - Smart Ride-Hailing & Trusted Delivery App for Libya
+# Wasel / واصل
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Flutter-3.27+-blue.svg" alt="Flutter">
-  <img src="https://img.shields.io/badge/GetX-State%20Management-orange.svg" alt="GetX">
-  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green.svg" alt="Platform">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
-</p>
+Ride-hailing and trusted delivery app for the Libyan market.
 
-## 📱 About The Project
+## 🚀 Getting Started
 
-**Wasel** is a comprehensive Flutter application designed to solve transportation and trusted delivery problems in the Libyan market. The app combines ride-hailing services (like Uber) with trusted item delivery, featuring full support for Libyan electronic payment gateways.
+### Prerequisites
 
-### Key Features
+- Flutter 3.27+
+- Firebase Project
+- Google Maps API Key
 
-| Service | Description |
-|---------|-------------|
-| 🚗 **Ride Hailing** | One-tap car booking, fixed upfront pricing |
-| 📦 **Trusted Delivery** | Transport packages, documents, keys with OTP confirmation |
-| 💳 **Electronic Payment** | Support for T-LYNC, Plutu, Sadad, plus cash payment |
-| 🌍 **Bilingual** | Full Arabic and English support with RTL/LTR |
-| 🗺️ **Live Tracking** | Real-time driver/courier tracking on map |
+### Installation
 
----
+1. Clone the repository
+2. Run `flutter pub get`
+3. Add your API keys in `lib/core/constants/app_constants.dart`
+4. Setup Firebase for Android and iOS
+
+### API Configuration
+
+You need to provide the following API keys in `lib/core/constants/app_constants.dart`:
+- `googleMapsApiKey`
+- `googlePlacesApiKey`
+- `googleDistanceMatrixApiKey`
+
+## 🏗️ Project Structure
+
+```
+lib/
+├── core/
+│   ├── constants/
+│   ├── themes/
+│   ├── translations/
+│   ├── services/
+│   └── utils/
+├── data/
+│   ├── models/
+│   ├── repositories/
+│   └── providers/
+├── domain/
+│   ├── entities/
+│   └── usecases/
+├── presentation/
+│   ├── controllers/
+│   ├── pages/
+│   └── widgets/
+├── routes/
+└── bindings/
+```
 
 ## 🛠️ Tech Stack
 
-| Area | Technology |
-|------|------------|
-| **Framework** | Flutter 3.27+ |
-| **State Management** | GetX (Reactive + Navigation + DI) |
-| **Maps & Location** | Google Maps Flutter SDK, Geolocator |
-| **Authentication** | Firebase Phone Auth (OTP) |
-| **Database** | Cloud Firestore + Hive (Offline-first) |
-| **Push Notifications** | Firebase Cloud Messaging (FCM) |
-| **Payments** | T-LYNC, Plutu, Sadad APIs |
-| **Local Storage** | Hive (for offline support) |
-| **Image & Camera** | image_picker, camera |
+- **State Management:** GetX
+- **Database:** Cloud Firestore
+- **Local Storage:** Hive
+- **Authentication:** Firebase Phone Auth
+- **Maps:** Google Maps Flutter SDK
 
----
+## 🌍 Localization
 
-## 📋 Prerequisites
-
-Before running the app, ensure you have the following:
-
-### 1. Development Environment
-
-```bash
-# Flutter SDK (3.27 or newer)
-flutter --version
-
-# Dart SDK
-dart --version
-
-# Android Studio / VS Code with appropriate extensions
+Supported languages:
+- Arabic (Default)
+- English
