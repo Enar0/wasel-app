@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart'; // TEMP_DISABLED_FIREBASE
 import 'core/services/hive_service.dart';
 import 'core/themes/app_theme.dart';
 import 'core/translations/app_translations.dart';
@@ -16,9 +16,9 @@ void main() async {
   await hiveService.init();
 
   // Initialize Firebase (Placeholder for actual config)
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  // await Firebase.initializeApp( // TEMP_DISABLED_FIREBASE
+  //   options: DefaultFirebaseOptions.currentPlatform, // TEMP_DISABLED_FIREBASE
+  // ); // TEMP_DISABLED_FIREBASE
 
   runApp(const WaselApp());
 }

@@ -37,7 +37,12 @@ class AuthController extends GetxController {
         },
         verificationFailed: (e) {
           isLoading.value = false;
-          Get.snackbar('Error', e.message ?? 'Verification failed');
+          // Use a generic error message if e.message is not available
+          String message = 'Verification failed'; // TEMP_DISABLED_FIREBASE
+          try {
+            message = (e as dynamic).message ?? message;
+          } catch (_) {}
+          Get.snackbar('Error', message);
         },
       );
     } catch (e) {
